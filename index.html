@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Living Meta-Analysis of Lignin-Nanocellulose Hybrid Systems</title>
+<title>A living meta-analysis of lignin-nanocellulose hybrid systems</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@ body {
 <body>
 <div class="container mx-auto p-4 md:p-8">
 <header class="text-center mb-12">
-    <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-6">A Living Meta-Analysis of Lignin-Nanocellulose Hybrid Systems: Interaction Trends and Performance Thresholds</h1>
+    <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-6">A living meta-analysis of lignin-nanocellulose hybrid systems: interaction trends and performance thresholds</h1>
     
     <div class="mb-8">
         <p class="text-xl text-sky-400 font-semibold mb-2">Esranur Kaya¹, Ronald Marquez¹, Marc Delgado-Aguilar¹</p>
@@ -46,7 +46,7 @@ body {
             ¹ LEPAMAP-PRODIS Research Group, University of Girona. C/ Maria Aurèlia Capmany, 61 – 17003 Girona (Spain)<br>
             <a href="mailto:esranur.kaya@udg.edu" class="text-sky-400 hover:text-sky-300 transition-colors">esranur.kaya@udg.edu</a>, 
             <a href="mailto:ronald.marquez@udg.edu" class="text-sky-400 hover:text-sky-300 transition-colors">ronald.marquez@udg.edu</a>, 
-            Fifth, for extreme barrier applications, esterifying lignin creates thermally triggered sealants that induce pore collapse during hot-pressing, reducing water vapor transmission. Finally, bioactive properties, including UV-shielding and antioxidant capacity, scale linearly with lignin content independent of mechanical limits. An interactive living meta-analysis accessible with a QR code was developed. This work provides a data-driven framework for designing high-performance lignocellulosic biocomposites and supports their use in applications ranging from sustainable packaging to flexible electronics.
+            <a href="mailto:m.delgado@udg.edu" class="text-sky-400 hover:text-sky-300 transition-colors">m.delgado@udg.edu</a>
         </p>
     </div>
     
@@ -60,33 +60,30 @@ body {
 
 <main class="space-y-12">
 <section class="bg-slate-800/40 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl">
-    <h2 class="text-2xl font-bold mb-4 text-white flex items-center">
+    <h2 class="text-2xl font-bold mb-6 text-white flex items-center">
         <span class="bg-sky-500 w-2 h-8 rounded-full mr-3"></span>
-        1. Lignin-Cellulose Hybrids Interactive Data Explorer
+        1. Lignin-cellulose hybrids interactive data explorer
     </h2>
-    <p class="text-slate-400 mb-6 text-base">
-        Explore the true trends isolated from 61 scientific articles. Missing data (N/R) is strictly ignored rather than imputed, ensuring correlations and scatter distributions accurately reflect validated experimental parameters. Click on any data point to open the original study directly via DOI.
-    </p>
 
     <div class="control-panel grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 mb-6">
         <div>
-            <label for="x-axis-select" class="block text-sm font-semibold mb-1">X-Axis:</label>
+            <label for="x-axis-select" class="block text-sm font-semibold mb-1">X-axis:</label>
             <select id="x-axis-select" class="block w-full px-3 py-2.5 rounded-lg shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm"></select>
         </div>
         <div>
-            <label for="y-axis-select" class="block text-sm font-semibold mb-1">Y-Axis:</label>
+            <label for="y-axis-select" class="block text-sm font-semibold mb-1">Y-axis:</label>
             <select id="y-axis-select" class="block w-full px-3 py-2.5 rounded-lg shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm"></select>
         </div>
         <div>
-            <label for="color-by-select" class="block text-sm font-semibold mb-1">Color By Category:</label>
+            <label for="color-by-select" class="block text-sm font-semibold mb-1">Color by category:</label>
             <select id="color-by-select" class="block w-full px-3 py-2.5 rounded-lg shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm"></select>
         </div>
         <div>
-            <label for="filter-category-select" class="block text-sm font-semibold mb-1">Filter Metric:</label>
+            <label for="filter-category-select" class="block text-sm font-semibold mb-1">Filter metric:</label>
             <select id="filter-category-select" class="block w-full px-3 py-2.5 rounded-lg shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm"></select>
         </div>
         <div>
-            <label for="filter-value-select" class="block text-sm font-semibold mb-1">Filter Value:</label>
+            <label for="filter-value-select" class="block text-sm font-semibold mb-1">Filter value:</label>
             <select id="filter-value-select" class="block w-full px-3 py-2.5 rounded-lg shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm"></select>
         </div>
     </div>
@@ -95,37 +92,45 @@ body {
         <div class="flex flex-wrap gap-4 bg-slate-800 px-4 py-3 rounded-lg border border-slate-700">
             <label class="flex items-center space-x-2 text-sm font-medium cursor-pointer">
                 <input type="checkbox" id="log-x-checkbox" class="h-4 w-4 rounded border-slate-600 text-sky-500 focus:ring-sky-500 bg-slate-700">
-                <span>Log Scale (X-Axis)</span>
+                <span>Log scale (X-axis)</span>
             </label>
             <label class="flex items-center space-x-2 text-sm font-medium cursor-pointer">
                 <input type="checkbox" id="log-y-checkbox" class="h-4 w-4 rounded border-slate-600 text-sky-500 focus:ring-sky-500 bg-slate-700">
-                <span>Log Scale (Y-Axis)</span>
+                <span>Log scale (Y-axis)</span>
             </label>
         </div>
         <button id="download-csv-btn" class="bg-sky-600 hover:bg-sky-500 text-white font-semibold py-2 px-6 rounded-lg transition-colors shadow-lg flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
-            Export Raw CSV
+            Export raw CSV
         </button>
     </div>
     
     <div id="interactive-scatter" class="w-full h-[600px] plot-container p-2 mb-8"></div>
 </section>
 
+<section class="bg-slate-800/40 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl">
+    <h2 class="text-2xl font-bold mb-4 text-white flex items-center">
+        <span class="bg-pink-500 w-2 h-8 rounded-full mr-3"></span>
+        2. Multidimensional pathway mapping
+    </h2>
+    <div id="pathway-plot" class="w-full h-[700px] plot-container p-4"></div>
+</section>
+
 <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
     <section class="bg-slate-800/40 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl">
         <h2 class="text-2xl font-bold mb-4 text-white flex items-center">
             <span class="bg-emerald-500 w-2 h-8 rounded-full mr-3"></span>
-            2. Property Distributions
+            3. Property distributions
         </h2>
         <div class="control-panel grid grid-cols-2 gap-5 mb-6">
             <div>
-                <label for="dist-y-select" class="block text-sm font-semibold mb-1">Metric (Y-Axis):</label>
+                <label for="dist-y-select" class="block text-sm font-semibold mb-1">Metric (Y-axis):</label>
                 <select id="dist-y-select" class="block w-full px-3 py-2.5 rounded-lg shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm"></select>
             </div>
             <div>
-                <label for="dist-category-select" class="block text-sm font-semibold mb-1">Group By (X-Axis):</label>
+                <label for="dist-category-select" class="block text-sm font-semibold mb-1">Group by (X-axis):</label>
                 <select id="dist-category-select" class="block w-full px-3 py-2.5 rounded-lg shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm"></select>
             </div>
         </div>
@@ -135,25 +140,17 @@ body {
     <section class="bg-slate-800/40 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl">
         <h2 class="text-2xl font-bold mb-4 text-white flex items-center">
             <span class="bg-purple-500 w-2 h-8 rounded-full mr-3"></span>
-            3. Pairwise Correlation Matrix
+            4. Pairwise correlation matrix
         </h2>
         <div id="heatmap-plot" class="w-full h-[585px] plot-container p-2"></div>
     </section>
 </div>
 
-<section class="bg-slate-800/40 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl">
-    <h2 class="text-2xl font-bold mb-4 text-white flex items-center">
-        <span class="bg-pink-500 w-2 h-8 rounded-full mr-3"></span>
-        4. Multidimensional Pathway Mapping
-    </h2>
-    <div id="pathway-plot" class="w-full h-[700px] plot-container p-4"></div>
-</section>
-
 </main>
 
 <footer class="text-center mt-16 mb-8 text-slate-500 text-sm border-t border-slate-800 pt-8 flex flex-col items-center gap-4">
     <div class="mt-4">
-        <p>Living Meta-Analysis presented at the <a href="https://www.ewlp2026.org/" target="_blank" class="text-sky-400 hover:text-sky-300 transition-colors font-medium underline">EWLP Conference 2026</a></p>
+        <p>Living meta-analysis presented at the <a href="https://www.ewlp2026.org/" target="_blank" class="text-sky-400 hover:text-sky-300 transition-colors font-medium underline">EWLP Conference 2026</a></p>
         <p>LEPAMAP-PRODIS Research Group. University of Girona. <a href="https://lepamap.udg.edu/" target="_blank" class="text-sky-400 hover:text-sky-300 transition-colors font-medium ml-1">https://lepamap.udg.edu/</a></p>
     </div>
 </footer>
@@ -165,30 +162,15 @@ document.addEventListener('DOMContentLoaded', function() {
 const database = [
     {
         'DOI': '10.1039/d5fd00063g', 'Lignin_Type': 'Kraft Lignin', 'Carbohydrate_Type': 'CNF', 'Synthesis_Method': 'Solvent Shifting', 'Target_Application': 'Food Packaging', 
-        'Particle_Size_nm': 300, 'Zeta_Potential_mV': null, 'Contact_Angle_deg': null, 'Tensile_Strength_MPa': 66,
-        'Lignin_Mw_Mn_PDI': 'N/R', 'Lignin_Chem_Features': 'Guaiacyl and syringyl units, C-H asymmetric vibrations', 
-        'Carbo_Dimensions': 'Mean diameter 5.0 ± 1.4 nm', 'Carbo_Surface_Charge': 'Carboxyl content 1043 ± 150 mmol/g', 
-        'Solvent_System': 'Acetone:Water (9:1)', 'Process_Parameters': 'Magnetically stirred 60 min, cast and dried at 30 °C',
-        'Component_Ratio': '2.5%, 5%, 10%, 20% (w/w)', 'Morphology': 'Transparent to brown films with irregular bulk lignin aggregates', 
-        'Interaction_Mechanism': 'Hydrogen bonding and electrostatic repulsion', 'Rheology': 'N/R', 'Bioactivity_Barrier': 'Antioxidant, antibacterial, complete UV-B shielding'
+        'Particle_Size_nm': 300, 'Zeta_Potential_mV': null, 'Contact_Angle_deg': null, 'Tensile_Strength_MPa': 66
     },
     {
         'DOI': '10.1016/j.carpta.2024.100651', 'Lignin_Type': 'Kraft Lignin', 'Carbohydrate_Type': 'CNF', 'Synthesis_Method': 'Solvent Shifting', 'Target_Application': 'Packaging', 
-        'Particle_Size_nm': 129, 'Zeta_Potential_mV': -79, 'Contact_Angle_deg': 68.35, 'Tensile_Strength_MPa': 139.7,
-        'Lignin_Mw_Mn_PDI': 'N/R', 'Lignin_Chem_Features': 'Phenolic hydroxyls, aromatic rings (~1510 cm⁻¹), carbonyls', 
-        'Carbo_Dimensions': 'Length: 8.90 μm, Diameter: 26.4 nm', 'Carbo_Surface_Charge': '-33.4 mV', 
-        'Solvent_System': 'Acetone/Water (LNP prep); Aqueous (composite)', 'Process_Parameters': 'Stirred 1 h, homogenized 30-50 bar, dried 7-9 days at RT',
-        'Component_Ratio': '1%, 5%, 10% LNP (w/w respect to CNF)', 'Morphology': 'Homogeneous dispersion, compact film structure', 
-        'Interaction_Mechanism': 'Hydrogen bonding network', 'Rheology': 'N/R', 'Bioactivity_Barrier': 'UV blocking, high barrier properties'
+        'Particle_Size_nm': 129, 'Zeta_Potential_mV': -79, 'Contact_Angle_deg': 68.35, 'Tensile_Strength_MPa': 139.7
     },
     {
         'DOI': '10.1016/j.heliyon.2024.e25272', 'Lignin_Type': 'Vanillin Epoxy', 'Carbohydrate_Type': 'CNF', 'Synthesis_Method': 'Solvent Exchange/Curing', 'Target_Application': 'Engineering Structures', 
-        'Particle_Size_nm': null, 'Zeta_Potential_mV': null, 'Contact_Angle_deg': 91.8, 'Tensile_Strength_MPa': 127.78,
-        'Lignin_Mw_Mn_PDI': 'N/R', 'Lignin_Chem_Features': 'Epoxidation of lignin derivates', 
-        'Carbo_Dimensions': 'N/R', 'Carbo_Surface_Charge': 'N/R', 
-        'Solvent_System': 'Water/Organic exchange', 'Process_Parameters': 'Curing at elevated temperature',
-        'Component_Ratio': '10 to 50 wt%', 'Morphology': 'Ultra-smooth continuous film with compact internal structure', 
-        'Interaction_Mechanism': 'Covalent cross-linking (ether bonds C–O–C) and intermolecular hydrogen bonding', 'Rheology': 'N/R', 'Bioactivity_Barrier': 'Flame retardant (self-extinguishing)'
+        'Particle_Size_nm': null, 'Zeta_Potential_mV': null, 'Contact_Angle_deg': 91.8, 'Tensile_Strength_MPa': 127.78
     },
     {'DOI': '10.1021/acs.biomac.0c01596', 'Lignin_Type': 'Kraft Lignin', 'Carbohydrate_Type': 'CNF', 'Synthesis_Method': 'Solvent Shifting', 'Target_Application': 'Food Packaging', 'Particle_Size_nm': 37, 'Zeta_Potential_mV': -37.5, 'Contact_Angle_deg': 61.5, 'Tensile_Strength_MPa': null},
     {'DOI': '10.1016/j.ijbiomac.2025.146904', 'Lignin_Type': 'Lignosulfonate', 'Carbohydrate_Type': 'CNF', 'Synthesis_Method': 'E-NIPS', 'Target_Application': 'Packaging', 'Particle_Size_nm': null, 'Zeta_Potential_mV': null, 'Contact_Angle_deg': 70, 'Tensile_Strength_MPa': null},
@@ -251,43 +233,61 @@ const database = [
 ];
 
 function toSentenceCase(str) {
-    if (!str || str === 'N/R' || str === 'n/r') return 'N/R';
+    if (!str || String(str).toUpperCase() === 'N/R') return 'N/R';
     
-    // Exception mapping for abbreviations that should stay uppercase
-    const exceptions = {
-        'cnc': 'CNC',
-        'cnf': 'CNF',
-        'tocnf': 'TOCNF',
-        'nps': 'NPs',
-        'uv-b': 'UV-B',
-        'co2': 'CO2',
-        'bctmp': 'BCTMP',
-        'pdes': 'PDES',
-        'eisa': 'EISA',
-        'e-nips': 'E-NIPS'
-    };
-
-    return str.split(' ').map(word => {
-        let lowerWord = word.toLowerCase();
-        if (exceptions[lowerWord]) {
-            return exceptions[lowerWord];
-        }
-        return word.charAt(0).toUpperCase() + lowerWord.slice(1);
-    }).join(' ');
+    // Maintain common acronyms
+    const abbreviations = ['CNC', 'CNF', 'TOCNF', 'NPs', 'UV-B', 'CO2', 'BCTMP', 'PDES', 'EISA', 'E-NIPS', 'DOI'];
+    
+    let lowerStr = String(str).toLowerCase();
+    let result = lowerStr.charAt(0).toUpperCase() + lowerStr.slice(1);
+    
+    // Restore abbreviations exactly
+    abbreviations.forEach(abbr => {
+        const regex = new RegExp('\\b' + abbr.toLowerCase() + '\\b', 'gi');
+        result = result.replace(regex, abbr);
+    });
+    
+    return result;
 }
 
-let processedData = database.map(d => {
-    const size = d.Particle_Size_nm === null ? null : Number(d.Particle_Size_nm);
-    const zeta = d.Zeta_Potential_mV === null ? null : Number(d.Zeta_Potential_mV);
-    const ca = d.Contact_Angle_deg === null ? null : Number(d.Contact_Angle_deg);
-    const ts = d.Tensile_Strength_MPa === null ? null : Number(d.Tensile_Strength_MPa);
+const categoryMap = {
+    'Wound dressings': 'Wound dressing',
+    'Free-radical copolymerization': 'Free radical polymerization',
+    'Free-radical polymerization': 'Free radical polymerization',
+    'Chemical crosslinking': 'Chemical cross-linking',
+    'Solution casting': 'Solvent casting',
+    'Wastewater purification': 'Wastewater treatment',
+    'Biomedical': 'Biomedical devices'
+};
 
+function normalize(str) {
+    let val = toSentenceCase(str);
+    return categoryMap[val] || val;
+}
+
+// Data Keys vs UI Labels Maps
+const labelMap = {
+    'Particle_Size_nm': 'Particle size (nm)',
+    'Zeta_Potential_mV': 'Zeta potential (mV)',
+    'Contact_Angle_deg': 'Contact angle (deg)',
+    'Tensile_Strength_MPa': 'Tensile strength (MPa)',
+    'Lignin_Type': 'Lignin type',
+    'Carbohydrate_Type': 'Carbohydrate type',
+    'Synthesis_Method': 'Synthesis method',
+    'Target_Application': 'Target application'
+};
+
+let processedData = database.map(d => {
     return {
         ...d,
-        Particle_Size_nm: size,
-        Zeta_Potential_mV: zeta,
-        Contact_Angle_deg: ca,
-        Tensile_Strength_MPa: ts
+        Particle_Size_nm: d.Particle_Size_nm === null ? null : Number(d.Particle_Size_nm),
+        Zeta_Potential_mV: d.Zeta_Potential_mV === null ? null : Number(d.Zeta_Potential_mV),
+        Contact_Angle_deg: d.Contact_Angle_deg === null ? null : Number(d.Contact_Angle_deg),
+        Tensile_Strength_MPa: d.Tensile_Strength_MPa === null ? null : Number(d.Tensile_Strength_MPa),
+        Lignin_Type: normalize(d.Lignin_Type),
+        Carbohydrate_Type: normalize(d.Carbohydrate_Type),
+        Synthesis_Method: normalize(d.Synthesis_Method),
+        Target_Application: normalize(d.Target_Application)
     };
 });
 
@@ -307,14 +307,14 @@ function populateSelectors() {
     Object.values(selects).forEach(s => s.innerHTML = '');
 
     numericalCols.forEach(col => {
-        const label = col.replace(/_/g, ' ');
+        const label = labelMap[col];
         selects.x.add(new Option(label, col));
         selects.y.add(new Option(label, col));
         selects.distY.add(new Option(label, col));
     });
 
     categoricalCols.forEach(col => {
-        const label = col.replace(/_/g, ' ');
+        const label = labelMap[col];
         selects.color.add(new Option(label, col));
         selects.filterCat.add(new Option(label, col));
         selects.distCat.add(new Option(label, col));
@@ -335,7 +335,7 @@ function populateSelectors() {
 function updateFilterValueOptions() {
     const filterCat = document.getElementById('filter-category-select').value;
     const filterValSelect = document.getElementById('filter-value-select');
-    filterValSelect.innerHTML = '<option value="All">All Data</option>';
+    filterValSelect.innerHTML = '<option value="All">All data</option>';
 
     if (filterCat && processedData.length > 0) {
         const uniqueValues = [...new Set(processedData.map(d => d[filterCat]))].filter(Boolean).sort();
@@ -391,8 +391,8 @@ function updateScatterPlot() {
     });
 
     const layout = {
-        xaxis: { title: xVar.replace(/_/g, ' '), type: logX ? 'log' : 'linear', gridcolor: '#334155', zerolinecolor: '#475569' },
-        yaxis: { title: yVar.replace(/_/g, ' '), type: logY ? 'log' : 'linear', gridcolor: '#334155', zerolinecolor: '#475569' },
+        xaxis: { title: labelMap[xVar], type: logX ? 'log' : 'linear', gridcolor: '#334155', zerolinecolor: '#475569' },
+        yaxis: { title: labelMap[yVar], type: logY ? 'log' : 'linear', gridcolor: '#334155', zerolinecolor: '#475569' },
         showlegend: true,
         legend: { font: { color: '#e2e8f0' }, orientation: 'h', y: -0.2},
         paper_bgcolor: 'transparent',
@@ -429,8 +429,8 @@ function updateDistributionPlot() {
     });
 
     const layout = {
-        yaxis: { title: yVar.replace(/_/g, ' '), gridcolor: '#334155', zeroline: false },
-        xaxis: { title: catVar.replace(/_/g, ' '), tickangle: -45 },
+        yaxis: { title: labelMap[yVar], gridcolor: '#334155', zeroline: false },
+        xaxis: { title: labelMap[catVar], tickangle: -45 },
         showlegend: false,
         paper_bgcolor: 'transparent',
         plot_bgcolor: 'transparent',
@@ -477,7 +477,7 @@ function drawHeatmap() {
         matrix.push(row);
     }
 
-    const labels = numericalCols.map(c => c.replace(/_/g, ' '));
+    const labels = numericalCols.map(c => labelMap[c]);
     const trace = {
         z: matrix,
         x: labels,
@@ -509,45 +509,26 @@ function drawPathway() {
     const colLabels = ['Lignin type', 'Carbohydrate precursor', 'Synthesis method', 'Final application'];
     
     const yMappings = {};
-    cols.forEach((col, idx) => {
-        // Map data to sentence case for consistency in the labels
-        const mappedData = data.map(d => toSentenceCase(d[col] || 'N/R'));
-        let uniqueVals = [...new Set(mappedData)].sort();
-        
-        // Reverse sort for Synthesis Method and Target Application so A is at the top
-        if (col === 'Synthesis_Method' || col === 'Target_Application') {
-            uniqueVals.reverse();
-        }
-
+    cols.forEach(col => {
+        // Reverse sorting guarantees that 'A' gets placed at the top (y=1) and 'Z' at the bottom (y=0)
+        const uniqueVals = [...new Set(data.map(d => d[col] || 'N/R'))].sort().reverse();
         yMappings[col] = {};
         uniqueVals.forEach((val, i) => {
             yMappings[col][val] = uniqueVals.length > 1 ? i / (uniqueVals.length - 1) : 0.5;
         });
     });
 
-    const mappedLigninData = data.map(d => toSentenceCase(d.Lignin_Type || 'N/R'));
-    const uniqueLignins = [...new Set(mappedLigninData)].sort();
+    const uniqueLignins = [...new Set(data.map(d => d.Lignin_Type || 'N/R'))].sort();
     const colorPalette = ['#ef4444', '#f97316', '#f59e0b', '#84cc16', '#22c55e', '#10b981', '#14b8a6', '#06b6d4', '#0ea5e9', '#3b82f6', '#6366f1', '#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e'];
 
     const traces = [];
     data.forEach(d => {
         const xVals = [0, 1, 2, 3];
+        const yVals = cols.map(col => yMappings[col][d[col] || 'N/R']);
         
-        const safeLignin = toSentenceCase(d.Lignin_Type || 'N/R');
-        const safeCarbo = toSentenceCase(d.Carbohydrate_Type || 'N/R');
-        const safeMethod = toSentenceCase(d.Synthesis_Method || 'N/R');
-        const safeApp = toSentenceCase(d.Target_Application || 'N/R');
-
-        const yVals = [
-            yMappings['Lignin_Type'][safeLignin],
-            yMappings['Carbohydrate_Type'][safeCarbo],
-            yMappings['Synthesis_Method'][safeMethod],
-            yMappings['Target_Application'][safeApp]
-        ];
+        const hoverTxt = `<b>DOI:</b> ${d.DOI}<br><b>Lignin:</b> ${d.Lignin_Type || 'N/R'}<br><b>Carbo:</b> ${d.Carbohydrate_Type || 'N/R'}<br><b>Method:</b> ${d.Synthesis_Method || 'N/R'}<br><b>App:</b> ${d.Target_Application || 'N/R'}<br><i>Click to open article</i>`;
         
-        const hoverTxt = `<b>DOI:</b> ${d.DOI}<br><b>Lignin:</b> ${safeLignin}<br><b>Carbo:</b> ${safeCarbo}<br><b>Method:</b> ${safeMethod}<br><b>App:</b> ${safeApp}<br><i>Click anywhere on the line to open article</i>`;
-        
-        const colorIdx = uniqueLignins.indexOf(safeLignin) % colorPalette.length;
+        const colorIdx = uniqueLignins.indexOf(d.Lignin_Type || 'N/R') % colorPalette.length;
         const lineColor = colorPalette[colorIdx];
 
         traces.push({
@@ -559,9 +540,8 @@ function drawPathway() {
             marker: { size: 8, color: lineColor, line: {width: 1, color: '#0f172a'} },
             customdata: [d.DOI, d.DOI, d.DOI, d.DOI],
             text: [hoverTxt, hoverTxt, hoverTxt, hoverTxt],
-            // 'skip' disables hover exactly at index 1 (Carbohydrate Precursor), while hoveron 'points+lines' makes whole line hoverable
-            hoverinfo: ['text', 'skip', 'text', 'text'],
-            hoveron: 'points+lines', 
+            hoverinfo: ['text', 'skip', 'text', 'text'], // Skips hover exclusively on Carbohydrate precursor column
+            hoveron: 'points+lines',
             showlegend: false,
             name: d.DOI,
             opacity: 0.7
@@ -615,12 +595,10 @@ function drawPathway() {
     
     const pathwayPlot = document.getElementById('pathway-plot');
     
-    // Clear out any old listeners
     pathwayPlot.removeAllListeners('plotly_hover');
     pathwayPlot.removeAllListeners('plotly_unhover');
     pathwayPlot.removeAllListeners('plotly_click');
 
-    // Add visual highlighting by fading non-hovered paths
     pathwayPlot.on('plotly_hover', function(hoverData) {
         if (hoverData.points && hoverData.points.length > 0) {
             const curveNum = hoverData.points[0].curveNumber;
@@ -629,7 +607,6 @@ function drawPathway() {
             const opacities = new Array(numTraces).fill(0.05);
             const widths = new Array(numTraces).fill(1.5);
             
-            // Highlight the hovered trace
             opacities[curveNum] = 1;
             widths[curveNum] = 5;
             
@@ -638,7 +615,6 @@ function drawPathway() {
         }
     });
 
-    // Restore trace styling on unhover
     pathwayPlot.on('plotly_unhover', function() {
         const numTraces = pathwayPlot.data.length;
         const opacities = new Array(numTraces).fill(0.7);
@@ -648,7 +624,6 @@ function drawPathway() {
         pathwayPlot.style.cursor = '';
     });
 
-    // Make the entire line clickable by utilizing the point data captured near the line
     pathwayPlot.on('plotly_click', function(clickData) {
         if (clickData.points && clickData.points.length > 0) {
             const rawDoi = clickData.points[0].customdata;
@@ -706,7 +681,7 @@ function init() {
     ['x-axis-select', 'y-axis-select', 'color-by-select', 'log-x-checkbox', 'log-y-checkbox'].forEach(id => {
         document.getElementById(id).addEventListener('change', updateScatterPlot);
     });
-
+    
     document.getElementById('filter-category-select').addEventListener('change', () => {
         updateFilterValueOptions();
         updateAllPlots();
