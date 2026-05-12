@@ -522,9 +522,15 @@ function drawPathway() {
     const colorPalette = ['#ef4444', '#f97316', '#f59e0b', '#84cc16', '#22c55e', '#10b981', '#14b8a6', '#06b6d4', '#0ea5e9', '#3b82f6', '#6366f1', '#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e'];
 
     const traces = [];
-    data.forEach(d => {
+    data.forEach((d, i) => {
         const xVals = [0, 1, 2, 3];
-        const yVals = cols.map(col => yMappings[col][d[col] || 'N/R']);
+        
+        // Add deterministic jitter to spread out overlapping lines and make them individually selectable
+        const yVals = cols.map(col => {
+            const baseY = yMappings[col][d[col] || 'N/R'];
+            const jitter = (((i * 137) % 100) / 100) * 0.04 - 0.02; // Small +/- vertical offset
+            return baseY + jitter;
+        });
         
         const hoverTxt = `<b>DOI:</b> ${d.DOI}<br><b>Lignin:</b> ${d.Lignin_Type || 'N/R'}<br><b>Carbo:</b> ${d.Carbohydrate_Type || 'N/R'}<br><b>Method:</b> ${d.Synthesis_Method || 'N/R'}<br><b>App:</b> ${d.Target_Application || 'N/R'}<br><i>Click to open article</i>`;
         
@@ -537,11 +543,10 @@ function drawPathway() {
             mode: 'lines+markers',
             type: 'scatter',
             line: { width: 3, color: lineColor, shape: 'spline', smoothing: 1 },
-            marker: { size: 8, color: lineColor, line: {width: 1, color: '#0f172a'} },
-            customdata: [d.DOI, d.DOI, d.DOI, d.DOI],
-            text: [hoverTxt, hoverTxt, hoverTxt, hoverTxt],
-            hoverinfo: ['text', 'skip', 'text', 'text'], // Skips hover exclusively on Carbohydrate precursor column
-            hoveron: 'points+lines',
+            marker: { size: 6, color: lineColor, line: {width: 0.5, color: '#0f172a'} },
+            text: hoverTxt, // Unified text string to enable hovering on the line segments
+            hoverinfo: 'text',
+            hoveron: 'points+lines', // Crucial: explicitly enables line hovering
             showlegend: false,
             name: d.DOI,
             opacity: 0.7
@@ -588,6 +593,7 @@ function drawPathway() {
         },
         margin: { l: 200, r: 200, b: 40, t: 60 },
         hovermode: 'closest',
+        hoverdistance: 25, // Extends the catch radius for easier line hovering
         annotations: annotations
     };
 
@@ -601,9 +607,19 @@ function drawPathway() {
 
     pathwayPlot.on('plotly_hover', function(hoverData) {
         if (hoverData.points && hoverData.points.length > 0) {
-            const curveNum = hoverData.points[0].curveNumber;
+            const pt = hoverData.points[0];
             const numTraces = pathwayPlot.data.length;
             
+            // Prevent highlighting if hovering near the dense Carbohydrate column (x=1)
+            if (pt.x > 0.6 && pt.x < 1.4) {
+                const opacities = new Array(numTraces).fill(0.7);
+                const widths = new Array(numTraces).fill(3);
+                Plotly.restyle('pathway-plot', { opacity: opacities, 'line.width': widths });
+                pathwayPlot.style.cursor = '';
+                return;
+            }
+
+            const curveNum = pt.curveNumber;
             const opacities = new Array(numTraces).fill(0.05);
             const widths = new Array(numTraces).fill(1.5);
             
@@ -626,7 +642,7 @@ function drawPathway() {
 
     pathwayPlot.on('plotly_click', function(clickData) {
         if (clickData.points && clickData.points.length > 0) {
-            const rawDoi = clickData.points[0].customdata;
+            const rawDoi = clickData.points[0].data.name; // Get DOI directly from trace name 
             if (rawDoi) {
                 const doiMatch = rawDoi.match(/(10\.\d{4,9}\/[-._;()/:A-Z0-9a-z]+)/i);
                 if (doiMatch && doiMatch[0]) {
