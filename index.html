@@ -11,7 +11,8 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: #0f172a;
-    color: #e2e8f0;
+    /* Updated base color to off-white for easier reading */
+    color: #EFF1F2; 
 }
 .control-panel label {
     color: #cbd5e1;
@@ -37,10 +38,12 @@ body {
 </head>
 <body>
 <div class="container mx-auto p-4 md:p-8">
-<header class="text-center mb-12">
-    <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-6">A living meta-analysis of lignin-nanocellulose hybrid systems: interaction trends and performance thresholds</h1>
+<!-- Added mt-12 md:mt-20 to push the header further down -->
+<header class="text-center mt-12 md:mt-20 mb-12">
+    <!-- Changed text-white to text-[#EFF1F2] -->
+    <h1 class="text-3xl md:text-5xl font-bold text-[#EFF1F2] tracking-tight mb-6">A living meta-analysis of lignin-nanocellulose hybrid systems: interaction trends and performance thresholds</h1>
     
-    <div class="mb-8">
+    <div class="mb-10">
         <p class="text-xl text-sky-400 font-semibold mb-2">Esranur Kaya, Ronald Marquez, Marc Delgado-Aguilar</p>
         <p class="text-sm text-slate-400">
             LEPAMAP-PRODIS Research Group, University of Girona. C/ Maria Aurèlia Capmany, 61 – 17003 Girona (Spain)<br>
@@ -50,17 +53,23 @@ body {
         </p>
     </div>
     
-    <div class="bg-slate-800 p-8 rounded-xl text-left max-w-5xl mx-auto border border-slate-700 shadow-2xl">
-        <h3 class="text-xl font-bold text-white mb-4 border-b border-slate-600 pb-2">Abstract</h3>
+    <!-- Removed max-w-5xl mx-auto and matched section classes -->
+    <div class="bg-slate-800/40 p-6 md:p-8 rounded-2xl text-left border border-slate-700 shadow-xl mb-8">
+        <h3 class="text-xl font-bold text-[#EFF1F2] mb-4 border-b border-slate-600 pb-2">Abstract</h3>
         <p class="text-sm md:text-base text-slate-300 leading-relaxed text-justify">
-            Hybridizing nanocellulose with lignin offers a sustainable solution for biomass valorization, yet the development of these composites is primarily hindered by the structural variability and chemical heterogeneity of technical lignin. This results in poor interfacial compatibility, inhomogeneous dispersion, and difficulties in producing mechanically robust materials. To address these challenges and establish rational design principles, a meta-analysis was conducted by systematically extracting and normalizing quantitative data from studies on lignin–nanocellulose (L-NC) composites. The resulting database includes variables such as component ratios, synthesis routes, surface charge, and lignin molecular weight. The correlation of these variables reveals governing trends. First, in situ assembly methods successfully utilize the pre-existing fibrillar network as a spatial scaffold to confine lignin nanoparticles (LNPs) below 100 nm, preventing macroscopic coalescence. Second, normalization of formulations reveals a distinct structural divergence in performance thresholds based on material architecture. For dense 2D biocomposite films, a low-to-moderate L:NC mass ratio (within a 2.5:97.5 to 15:85 range) is required to act as a macromolecular plasticizer and physical nano-spacer, whereas exceeding a 20:80 ratio induces macroscopic agglomeration and mechanical failure. Conversely, highly porous 3D frameworks (e.g., aerogels and membranes) accommodate higher L:NC ratios (averaging ~33:67) to provide sufficient active sites for functional adsorption and conductivity. Third, the electrostatics of the template govern nanoscale assembly. Mildly negative cellulose nanofibrils yield lignin nanoparticle assemblies, while positively charged templates drive electrostatic adsorption and binding. Fourth, overcoming water susceptibility requires sacrificial networks via dynamic ionic or covalent cross-linking, which neutralizes swelling and yields high wet tensile strengths. Fifth, for extreme barrier applications, esterifying lignin creates thermally triggered sealants that induce pore collapse during hot-pressing, reducing water vapor transmission. Finally, bioactive properties, including UV-shielding and antioxidant capacity, scale linearly with lignin content independent of mechanical limits. An interactive living meta-analysis accessible with a QR code was developed. This work provides a data-driven framework for designing high-performance lignocellulosic biocomposites and supports their use in applications ranging from sustainable packaging to flexible electronics.
+            Hybridizing nanocellulose with lignin offers a <strong>sustainable solution for biomass valorization</strong>, yet the development of these composites is primarily hindered by the <strong>structural variability and chemical heterogeneity</strong> of technical lignin. This results in poor interfacial compatibility, inhomogeneous dispersion, and difficulties in producing mechanically robust materials. To address these challenges and establish <strong>rational design principles</strong>, a meta-analysis was conducted by systematically extracting and normalizing quantitative data from studies on lignin–nanocellulose (L-NC) composites. The resulting database includes variables such as component ratios, synthesis routes, surface charge, and lignin molecular weight. The correlation of these variables reveals governing trends. First, <strong>in situ assembly methods</strong> successfully utilize the pre-existing fibrillar network as a <strong>spatial scaffold</strong> to confine lignin nanoparticles (LNPs) below 100 nm, preventing macroscopic coalescence. Second, normalization of formulations reveals a distinct structural divergence in performance thresholds based on material architecture. For <strong>dense 2D biocomposite films</strong>, a low-to-moderate L:NC mass ratio (within a 2.5:97.5 to 15:85 range) is required to act as a macromolecular plasticizer and physical nano-spacer, whereas exceeding a 20:80 ratio induces macroscopic agglomeration and mechanical failure. Conversely, <strong>highly porous 3D frameworks</strong> (e.g., aerogels and membranes) accommodate higher L:NC ratios (averaging ~33:67) to provide sufficient active sites for functional adsorption and conductivity. Third, the <strong>electrostatics of the template</strong> govern nanoscale assembly. Mildly negative cellulose nanofibrils yield lignin nanoparticle assemblies, while positively charged templates drive electrostatic adsorption and binding. Fourth, overcoming water susceptibility requires <strong>sacrificial networks</strong> via dynamic ionic or covalent cross-linking, which neutralizes swelling and yields high wet tensile strengths. Fifth, for extreme barrier applications, <strong>esterifying lignin</strong> creates thermally triggered sealants that induce pore collapse during hot-pressing, reducing water vapor transmission. Finally, <strong>bioactive properties</strong>, including UV-shielding and antioxidant capacity, scale linearly with lignin content independent of mechanical limits. An interactive living meta-analysis accessible with a QR code was developed. This work provides a <strong>data-driven framework</strong> for designing high-performance lignocellulosic biocomposites and supports their use in applications ranging from sustainable packaging.
         </p>
+        <div class="mt-6 pt-4 border-t border-slate-700/50">
+            <p class="text-sm md:text-base text-sky-200">
+                <strong class="text-[#EFF1F2]">Keywords:</strong> Lignin, Nanocellulose, Biocomposites, Meta-analysis, Sustainable Packaging, Biomaterials, Biomass Valorization.
+            </p>
+        </div>
     </div>
 </header>
 
 <main class="space-y-12">
 <section class="bg-slate-800/40 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl">
-    <h2 class="text-2xl font-bold mb-6 text-white flex items-center">
+    <h2 class="text-2xl font-bold mb-6 text-[#EFF1F2] flex items-center">
         <span class="bg-sky-500 w-2 h-8 rounded-full mr-3"></span>
         1. Lignin-cellulose hybrids interactive data explorer
     </h2>
@@ -111,7 +120,7 @@ body {
 </section>
 
 <section class="bg-slate-800/40 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl">
-    <h2 class="text-2xl font-bold mb-4 text-white flex items-center">
+    <h2 class="text-2xl font-bold mb-4 text-[#EFF1F2] flex items-center">
         <span class="bg-pink-500 w-2 h-8 rounded-full mr-3"></span>
         2. Multidimensional pathway mapping
     </h2>
@@ -120,7 +129,7 @@ body {
 
 <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
     <section class="bg-slate-800/40 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl">
-        <h2 class="text-2xl font-bold mb-4 text-white flex items-center">
+        <h2 class="text-2xl font-bold mb-4 text-[#EFF1F2] flex items-center">
             <span class="bg-emerald-500 w-2 h-8 rounded-full mr-3"></span>
             3. Property distributions
         </h2>
@@ -138,7 +147,7 @@ body {
     </section>
 
     <section class="bg-slate-800/40 p-6 md:p-8 rounded-2xl border border-slate-700 shadow-xl">
-        <h2 class="text-2xl font-bold mb-4 text-white flex items-center">
+        <h2 class="text-2xl font-bold mb-4 text-[#EFF1F2] flex items-center">
             <span class="bg-purple-500 w-2 h-8 rounded-full mr-3"></span>
             4. Pairwise correlation matrix
         </h2>
@@ -228,7 +237,6 @@ const database = [
     {'DOI': '10.1016/j.jenvman.2022.117210', 'Lignin_Type': 'Birch Lignin', 'Carbohydrate_Type': 'TOCNF', 'Synthesis_Method': 'Electrostatic Assembly', 'Target_Application': 'Wastewater Treatment', 'Particle_Size_nm': null, 'Zeta_Potential_mV': null, 'Contact_Angle_deg': null, 'Tensile_Strength_MPa': null},
     {'DOI': '10.3390/nano11123426', 'Lignin_Type': 'Bagasse Lignin', 'Carbohydrate_Type': 'CNF', 'Synthesis_Method': 'Vacuum Filtration', 'Target_Application': 'Plastic Replacements', 'Particle_Size_nm': 292, 'Zeta_Potential_mV': null, 'Contact_Angle_deg': 112, 'Tensile_Strength_MPa': 70},
     {'DOI': '10.1016/j.ijbiomac.2020.01.102', 'Lignin_Type': 'Celery Lignin', 'Carbohydrate_Type': 'CNF', 'Synthesis_Method': 'Solution Casting', 'Target_Application': 'Wastewater Treatment', 'Particle_Size_nm': null, 'Zeta_Potential_mV': null, 'Contact_Angle_deg': null, 'Tensile_Strength_MPa': null},
-    {'DOI': '10.1021/acssuschemeng.2c02785', 'Lignin_Type': 'Alkali Lignin', 'Carbohydrate_Type': 'CNF', 'Synthesis_Method': 'Continuous Wet-Spinning', 'Target_Application': 'Fiber Composites', 'Particle_Size_nm': null, 'Zeta_Potential_mV': null, 'Contact_Angle_deg': 143, 'Tensile_Strength_MPa': 684.61},
     {'DOI': '10.1016/j.compositesb.2022.109803', 'Lignin_Type': 'Lignosulfonate', 'Carbohydrate_Type': 'CNF', 'Synthesis_Method': 'Chemical Cross-Linking', 'Target_Application': 'Flexible Electronics', 'Particle_Size_nm': null, 'Zeta_Potential_mV': null, 'Contact_Angle_deg': null, 'Tensile_Strength_MPa': 146}
 ];
 
@@ -250,6 +258,7 @@ function toSentenceCase(str) {
     return result;
 }
 
+// Expanded normalization map to group overlapping categories
 const categoryMap = {
     'Wound dressings': 'Wound dressing',
     'Free-radical copolymerization': 'Free radical polymerization',
@@ -257,7 +266,21 @@ const categoryMap = {
     'Chemical crosslinking': 'Chemical cross-linking',
     'Solution casting': 'Solvent casting',
     'Wastewater purification': 'Wastewater treatment',
-    'Biomedical': 'Biomedical devices'
+    'Biomedical': 'Biomedical devices',
+    
+    // Grouping all Packaging types
+    'Food packaging': 'Packaging',
+    'Active packaging': 'Packaging',
+    'Biobased packaging': 'Packaging',
+    
+    // Grouping Carbon Capture
+    'Co2 capture': 'Carbon capture',
+    
+    // Grouping Plastics & Eco-friendly plastics
+    'Biodegradable plastics': 'Sustainable plastics',
+    'Eco-friendly plastics': 'Sustainable plastics',
+    'Plastic replacements': 'Sustainable plastics',
+    'Reinforced plastics': 'Sustainable plastics'
 };
 
 function normalize(str) {
@@ -605,20 +628,11 @@ function drawPathway() {
     pathwayPlot.removeAllListeners('plotly_unhover');
     pathwayPlot.removeAllListeners('plotly_click');
 
+    // Changed: User constraint applied -> entire connection is visible in any place! The conditional restriction logic for dense columns was entirely removed.
     pathwayPlot.on('plotly_hover', function(hoverData) {
         if (hoverData.points && hoverData.points.length > 0) {
             const pt = hoverData.points[0];
             const numTraces = pathwayPlot.data.length;
-            
-            // Prevent highlighting if hovering near the dense Carbohydrate column (x=1)
-            if (pt.x > 0.6 && pt.x < 1.4) {
-                const opacities = new Array(numTraces).fill(0.7);
-                const widths = new Array(numTraces).fill(3);
-                Plotly.restyle('pathway-plot', { opacity: opacities, 'line.width': widths });
-                pathwayPlot.style.cursor = '';
-                return;
-            }
-
             const curveNum = pt.curveNumber;
             const opacities = new Array(numTraces).fill(0.05);
             const widths = new Array(numTraces).fill(1.5);
@@ -642,7 +656,7 @@ function drawPathway() {
 
     pathwayPlot.on('plotly_click', function(clickData) {
         if (clickData.points && clickData.points.length > 0) {
-            const rawDoi = clickData.points[0].data.name; // Get DOI directly from trace name 
+            const rawDoi = clickData.points[0].data.name; 
             if (rawDoi) {
                 const doiMatch = rawDoi.match(/(10\.\d{4,9}\/[-._;()/:A-Z0-9a-z]+)/i);
                 if (doiMatch && doiMatch[0]) {
